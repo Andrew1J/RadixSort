@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Radix{
     public static int nth(int n, int col){
-        return Math.abs(n / bexp(10,col)) % 10;
+       return (int)Math.abs(n / Math.pow(10,col)) % 10;
     }
 
     public static int length(int n){
