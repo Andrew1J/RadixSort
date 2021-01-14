@@ -38,12 +38,12 @@ public class Radix{
     public static void radixSort(SortableLinkedList data){
         SortableLinkedList pos = new SortableLinkedList();
         SortableLinkedList neg = new SortableLinkedList();
-        int n = data.size();
         while(data.size()>0){
-            if(data.remove(0)<0){
-                neg.add(data.remove(0)*-1);
+            int val = data.remove(0);
+            if(val<0){
+                neg.add(val*-1);
             } else {
-                pos.add(data.remove(0));
+                pos.add(val);
             }
         }
         radixSortSimple(pos);
