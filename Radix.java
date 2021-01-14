@@ -39,8 +39,8 @@ public class Radix{
         SortableLinkedList pos = new SortableLinkedList();
         SortableLinkedList neg = new SortableLinkedList();
         int n = data.size();
-        for(int i=0;i<n;i++){
-            if(data.get(0)<0){
+        while(data.size()>0){
+            if(data.remove(0)<0){
                 neg.add(data.remove(0)*-1);
             } else {
                 pos.add(data.remove(0));
